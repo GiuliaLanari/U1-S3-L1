@@ -2,31 +2,34 @@
   Scrivi una funzione per concatenare due stringhe ricevute come parametri, selezionando solamente i primi 2 caratteri della
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
 */
-const str1 = "ciao";
-const str2 = "epicode";
-
+/*CONTROLLARE
 const stringhe = (str1, str2) => {
-  stringhe.concat(str1 + str2);
+  let str1 = str1.slice(0,2)
+  let str2 = str2.slice()
+  let risultato= str1 + str2 ;
 };
-
+*/
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
-/*
-const funzione = [];
-
-const numeriRamdom = funzione.forEach(numero<10) {
-  funzione1[i].push(numero + Math.floor(Math.random()*101))
+/*CONTROLLARE
+function conteiner(numeriRandom) {
+  const contenitore = [];
+  for (let i = 0; i < contenitore.length; i++) {
+    const numeriRamdom = Math.floor(Math.random() * 101);
+    contenitore.push(numeriRamdom);
+  }
+  return contenitore;
 }
-;
+const arreyCasuale = conteiner();
 
-
-console.log(funzione);
+console.log(arreyCasuale);
+*/
 
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
-/* GIUSTO!!
+/* GIUSTO
 const numbers = [30, 55, 65, 33, 20, 18, 14];
 
 const pariNums = numbers.filter((num) => num % 2 === 0);
@@ -36,13 +39,13 @@ console.log(pariNums);
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
-/*
+/*CONTROLLARE
 const numbers1 = [30, 55, 65, 33, 20, 18, 14];
 
 const somma1 = numbers1.forEach((num) => {
 
 });
-
+*/
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
@@ -50,10 +53,9 @@ const somma1 = numbers1.forEach((num) => {
 /* VENUTO!
 const numbers2 = [30, 55, 65, 33, 20, 18, 14];
 
-const somma2 = numbers2.reduce((amount, total) => total + amount);
+const somma2 = numbers2.reduce((amount, total) => total + amount,0);
 console.log(somma2);
-
-
+*/
 
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
@@ -66,8 +68,7 @@ const incrementoNumbers3 = numbers3.map(function (n) {
 });
 
 console.log(incrementoNumbers3);
-
-
+*/
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
@@ -77,6 +78,18 @@ console.log(incrementoNumbers3);
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+/* DA CORREGERE
+const dispariNums = function (num) {
+  const numbers4 = [];
+
+  for (let i = 0; i < 100; i++) {
+    if (i % 2 !== 0) {
+      numbers4.push(i++);
+    }
+    return numbers4.length;
+  }
+};
+console.log(dispariNums);
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -196,6 +209,9 @@ const movies = [
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
+function numeroFilm() {
+  return console.log(movies.length);
+}
 
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
